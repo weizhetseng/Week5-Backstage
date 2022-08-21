@@ -10464,10 +10464,6 @@ img {
   line-height: 1.5;
 }
 
-.wrap a {
-  color: #212529;
-}
-
 nav {
   width: 296px;
   padding: 32px;
@@ -10553,12 +10549,30 @@ main .assignment_content .assignment_text .btn {
   width: 176px;
 }
 
+main textarea {
+  resize: none;
+  border: none;
+  background: transparent;
+}
+
 main .assignment_btn a:first-child {
+  padding: 8px 32px;
+}
+
+main .textarea_btn {
+  text-align: right;
+}
+
+main .textarea_btn a {
   padding: 8px 32px;
 }
 
 .btn-group {
   margin-top: 64px;
+}
+
+.table {
+  height: 550px;
 }
 
 /*# sourceMappingURL=all.css.map */

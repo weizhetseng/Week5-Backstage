@@ -1,6 +1,11 @@
 "use strict";
 
-$(function () {
-  console.log('Hello Bootstrap5');
+$('.reply').click(function (e) {
+  e.preventDefault();
+  $('.reply_content,.answer,.assignment_btn_group').toggleClass('d-none');
+});
+$('.cancel').click(function (e) {
+  e.preventDefault();
+  $('.reply_content,.answer,.assignment_btn_group').toggleClass('d-none');
 });
 //# sourceMappingURL=all.js.map
