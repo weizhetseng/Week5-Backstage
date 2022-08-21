@@ -39,7 +39,7 @@
           </a>
         </li>
         <li class="mb-4">
-          <a href="index.html" class="d-flex align-items-center gap-3 text-dark fw-bold">
+          <a href="index.html" id="nav_link" class="d-flex align-items-center gap-3 text-dark fw-bold">
             <span class="material-icons">
               assignment
             </span>
@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="mb-4">
-          <a href="admin.html" class="d-flex align-items-center gap-3 text-dark fw-bold">
+          <a href="admin.html" id="nav_link" class="d-flex align-items-center gap-3 text-dark fw-bold">
             <span class="material-icons">
               group
             </span>
@@ -85,22 +85,91 @@
 <main>
     <section class="header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
-            <h2 class="fs-4 fw-bold">Admin</h2>
+            <h2 class="fs-4 fw-bold text">Admin</h2>
             <div class="d-flex gap-2 align-items-center">
-                <a href="">
+                <a href="#" type="button" class="" data-bs-toggle="modal" data-bs-target="#add">
                     <span class="material-icons text-success">
                         add
                     </span>
                 </a>
+                <!-- Modal -->
+                <div class="modal fade" id="add" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title fs-4 fw-bold" id="staticBackdropLabel">Admin</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-start">
+                                <div class="mb-4">
+                                    <h4 class="fw-bold mb-3">Account</h4>
+                                    <form action="" class="d-flex flex-column">
+                                        <label class="mb-1" for="name">Name</label>
+                                        <input class="mb-3 p-3" type="text" id="name">
+                                        <label class="mb-1" for="Email">Email</label>
+                                        <input class="p-3" type="text" id="Email">
+                                    </form>
+                                </div>
+                                <hr>
+                                <div class="my-4">
+                                    <h4 class="fw-bold mb-3">Verification</h4>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="d-flex">
+                                            <span class="material-icons text-danger">
+                                                warning
+                                            </span>
+                                            <p>Unverified</p>
+                                        </div>
+                                        <p class="text-secondary">2020/4/12</p>
+                                    </div>
+
+                                    <button type="button" class="border p-3 text-success">Send Verification
+                                        Mail</button>
+                                </div>
+                                <hr>
+                                <div class="my-4">
+                                    <h4 class="fw-bold mb-3">Access Level</h4>
+                                    <select name="" id="" class="p-3">
+                                        <option value="">-Choose access level-</option>
+                                        <option value="">Admin</option>
+                                        <option value="">Admin</option>
+                                        <option value="">Admin</option>
+                                        <option value="">Admin</option>
+                                        <option value="">Admin</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <div class="my-4">
+                                    <h4 class="fw-bold mb-3">Custom Access</h4>
+                                    <div class="d-flex flex-column">
+                                        <label class="mb-3" for=""><input type="checkbox"> Lecture</label>
+                                        <label class="mb-3" for=""><input type="checkbox"> Coupon</label>
+                                        <label class="mb-3" for=""><input type="checkbox"> Message</label>
+                                        <label class="mb-3" for=""><input type="checkbox"> Setting</label>
+                                        <label for=""><input type="checkbox"> Task Menu</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p class="fw-bold">Add New Admin</p>
             </div>
         </div>
         <div>
-            <a href=""><span class="material-icons me-4">
+            <a href="#"><span class="material-icons me-4">
                     search
                 </span></a>
 
-            <a href=""><span class="material-icons">
+            <a href="#"><span class="material-icons">
                     notifications_active
                 </span></a>
 
@@ -113,7 +182,7 @@
                     <tr>
                         <th class="d-flex align-items-center">
                             <p>ID</p>
-                            <a href=""><span class="material-icons text-success">
+                            <a href="#"><span class="material-icons text-success">
                                     arrow_downward
                                 </span></a>
                         </th>
@@ -130,12 +199,151 @@
                         <td>emir.wicks@mail.com</td>
                         <td>Yes</td>
                         <td class="text-end">
-                            <a href="" class="me-4"><span class="material-icons">
+
+                            <!-- Button trigger modal -->
+                            <a href="#" type="button" class="me-4" data-bs-toggle="modal" data-bs-target="#visibility">
+                                <span class="material-icons">
                                     visibility
-                                </span></a>
-                            <a href=""><span class="material-icons">
+                                </span>
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="visibility" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body d-flex gap-4 text-start">
+                                            <img src="./assets/images/emir.jpeg" alt="">
+                                            <div class="modal_body_text">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-2">#1</p>
+                                                    <a href="#" data-bs-dismiss="modal"
+                                                        aria-label="Close"><span class="material-icons">
+                                                            clear
+                                                        </span></a>
+
+                                                </div>
+                                                <p>Admin</p>
+                                                <h3 class="mb-2 fw-bold fs-4">Emir Wicks</h3>
+                                                <p class="fs-c-14 text-secondary mb-3">emir.wicks@mail.com</p>
+                                                <a href="" class="Verified d-flex justify-content-between">
+                                                    <p class="bg-light text-dark py-1 px-2">Verified</p>
+                                                    <span class="material-icons">
+                                                        expand_more
+                                                    </span>
+                                                </a>
+                                                <div class="Verified_button d-none">
+                                                    <a href="" class="d-flex justify-content-between">
+                                                        <p class="bg-light text-dark py-1 px-2">Verified</p>
+                                                        <span class="material-icons">
+                                                            expand_more
+                                                        </span>
+                                                    </a>
+                                                    <div class="d-flex gap-3">
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger">Deactivate</button>
+                                                        <button type="button" class="btn btn-success">Edit</button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--cool-->
+                            <a href="#" type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <span class="material-icons">
                                     edit
-                                </span></a>
+                                </span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title fs-4 fw-bold" id="staticBackdropLabel">Edit Admin
+                                            </h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <div class="mb-4">
+                                                <h4 class="fw-bold mb-3">Account</h4>
+                                                <form action="" class="d-flex flex-column">
+                                                    <label class="mb-1" for="name">Name</label>
+                                                    <input class="mb-3 p-3" type="text" id="name" disabled
+                                                        placeholder="Emir Wicks">
+                                                    <label class="mb-1" for="Email">Email</label>
+                                                    <input class="p-3" type="text" id="Email" disabled
+                                                        placeholder="emir.wicks@mail.com">
+                                                </form>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Verification</h4>
+                                                <div class="d-flex justify-content-between mb-3">
+                                                    <div class="d-flex">
+                                                        <span class="material-icons text-success">
+                                                            check_circle
+                                                        </span>
+                                                        <p>Verified</p>
+                                                    </div>
+                                                    <p class="text-secondary">2020/4/12</p>
+                                                </div>
+
+                                                <button type="button" class="border p-3" disabled>Send Verification
+                                                    Mail</button>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Access Level</h4>
+                                                <select name="" id="" class="p-3">
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                </select>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Custom Access</h4>
+                                                <div class="d-flex flex-column">
+                                                    <label class="mb-3" for=""><input type="checkbox"> Lecture</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Coupon</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Message</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Setting</label>
+                                                    <label for=""><input type="checkbox"> Task Menu</label>
+                                                </div>
+
+                                            </div>
+                                            <hr>
+                                            <div class="mt-4">
+                                                <h4 class="fw-bold mb-3">Deactivate Account</h4>
+                                                <div class="d-flex gap-2 mb-3">
+                                                    <span class="material-icons text-danger">
+                                                        warning
+                                                    </span>
+                                                    <p class="text-danger">This cannot be undone!</p>
+                                                </div>
+                                                <button type="button" class="btn p-3 btn-outline-danger">Deactivate This
+                                                    Account</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -143,12 +351,101 @@
                         <td>Zaina Goldsmith</td>
                         <td>zaina.goldsmith@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end">
+                            <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+
+                            <a href="#" type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <span class="material-icons">
                                     edit
-                                </span></a>
+                                </span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title fs-4 fw-bold" id="staticBackdropLabel">Edit Admin
+                                            </h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <div class="mb-4">
+                                                <h4 class="fw-bold mb-3">Account</h4>
+                                                <form action="" class="d-flex flex-column">
+                                                    <label class="mb-1" for="name">Name</label>
+                                                    <input class="mb-3 p-3" type="text" id="name" disabled
+                                                        placeholder="Zaina Goldsmith">
+                                                    <label class="mb-1" for="Email">Email</label>
+                                                    <input class="p-3" type="text" id="Email" disabled
+                                                        placeholder="zaina.goldsmith@mail.com">
+                                                </form>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Verification</h4>
+                                                <div class="d-flex justify-content-between mb-3">
+                                                    <div class="d-flex">
+                                                        <span class="material-icons text-success">
+                                                            check_circle
+                                                        </span>
+                                                        <p>Verified</p>
+                                                    </div>
+                                                    <p class="text-secondary">2020/4/12</p>
+                                                </div>
+
+                                                <button type="button" class="border p-3" disabled>Send Verification
+                                                    Mail</button>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Access Level</h4>
+                                                <select name="" id="" class="p-3">
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                    <option value="">Admin</option>
+                                                </select>
+                                            </div>
+                                            <hr>
+                                            <div class="my-4">
+                                                <h4 class="fw-bold mb-3">Custom Access</h4>
+                                                <div class="d-flex flex-column">
+                                                    <label class="mb-3" for=""><input type="checkbox"> Lecture</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Coupon</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Message</label>
+                                                    <label class="mb-3" for=""><input type="checkbox"> Setting</label>
+                                                    <label for=""><input type="checkbox"> Task Menu</label>
+                                                </div>
+
+                                            </div>
+                                            <hr>
+                                            <div class="mt-4">
+                                                <h4 class="fw-bold mb-3">Deactivate Account</h4>
+                                                <div class="d-flex gap-2 mb-3">
+                                                    <span class="material-icons text-danger">
+                                                        warning
+                                                    </span>
+                                                    <p class="text-danger">This cannot be undone!</p>
+                                                </div>
+                                                <button type="button" class="btn p-3 btn-outline-danger">Deactivate This
+                                                    Account</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -156,10 +453,10 @@
                         <td>Mahima Lopez</td>
                         <td>mahima.lopez@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>
@@ -169,10 +466,10 @@
                         <td>Pharrell Murray</td>
                         <td>pharrell.murray@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>
@@ -182,10 +479,10 @@
                         <td>Annika Mcbride</td>
                         <td>annika.mcbride@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>
@@ -195,10 +492,10 @@
                         <td>Fatimah Clark</td>
                         <td>fatimah.clark@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>
@@ -208,10 +505,10 @@
                         <td>Klaudia Rhodes</td>
                         <td>klaudia.rhodes@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>
@@ -221,10 +518,10 @@
                         <td>Tillie Lucero</td>
                         <td>tillie.lucero@mail.com</td>
                         <td>Yes</td>
-                        <td class="text-end"> <a href="" class="me-4"><span class="material-icons">
+                        <td class="text-end"> <a href="#" class="me-4"><span class="material-icons">
                                     visibility
                                 </span></a>
-                            <a href=""><span class="material-icons">
+                            <a href="#"><span class="material-icons">
                                     edit
                                 </span></a>
                         </td>

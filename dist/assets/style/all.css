@@ -10444,6 +10444,7 @@ q:before, q:after {
 
 span {
   vertical-align: middle;
+  color: #000;
 }
 
 a {
@@ -10464,10 +10465,6 @@ img {
   line-height: 1.5;
 }
 
-.wrap a {
-  color: #212529;
-}
-
 nav {
   width: 296px;
   padding: 32px;
@@ -10486,11 +10483,27 @@ nav .logo {
   position: relative;
 }
 
-nav li a:hover p, nav li a:hover span {
+nav li a:hover p,
+nav li a:hover span {
   color: #198754;
 }
 
 nav li a:hover::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 32px;
+  background: #198754;
+  position: absolute;
+  left: 0;
+}
+
+nav li a.active p,
+nav li a.active span {
+  color: #198754;
+}
+
+nav li a.active::before {
   content: '';
   display: block;
   width: 4px;
@@ -10553,12 +10566,57 @@ main .assignment_content .assignment_text .btn {
   width: 176px;
 }
 
+main textarea {
+  resize: none;
+  border: none;
+  background: transparent;
+}
+
 main .assignment_btn a:first-child {
+  padding: 8px 32px;
+}
+
+main .textarea_btn {
+  text-align: right;
+}
+
+main .textarea_btn a {
   padding: 8px 32px;
 }
 
 .btn-group {
   margin-top: 64px;
+}
+
+.table {
+  height: 550px;
+}
+
+.modal-body .modal-title {
+  margin-bottom: 32px;
+}
+
+.modal-body button,
+.modal-body select {
+  width: 100%;
+}
+
+#visibility .modal-body {
+  padding: 32px;
+}
+
+#visibility img {
+  width: 141px;
+  height: 141px;
+}
+
+#visibility .modal_body_text {
+  width: 260px;
+}
+
+#visibility button {
+  margin-top: 32px;
+  padding: 8px 32px;
 }
 
 /*# sourceMappingURL=all.css.map */

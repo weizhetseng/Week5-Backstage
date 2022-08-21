@@ -1,3 +1,42 @@
-.btn-group{
+.btn-group {
     margin-top: 64px;
+}
+
+.table {
+    height: 550px;
+}
+
+.modal-body {
+    .modal-title {
+        margin-bottom: 32px;
+    }
+
+    button,
+    select {
+        width: 100%;
+    }
+
+}
+
+#visibility {
+    .modal-body {
+        padding: 32px;
+    }
+
+    img {
+        width: 141px;
+        height: 141px;
+    }
+
+    .modal_body_text {
+        width: 260px;
+    }
+
+
+    button {
+        margin-top: 32px;
+        padding: 8px 32px;
+
+    }
+
 }

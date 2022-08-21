@@ -49,12 +49,25 @@ main {
         }
     }
 
+    textarea {
+        resize: none;
+        border: none;
+        background: transparent;
+    }
+
     .assignment_btn {
         a {
             &:first-child {
                 padding: 8px 32px;
 
             }
+        }
+    }
+
+    .textarea_btn {
+        text-align: right;
+        a {
+            padding: 8px 32px;
         }
     }
 }
