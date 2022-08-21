@@ -39,7 +39,7 @@
           </a>
         </li>
         <li class="mb-4">
-          <a href="index.html" class="d-flex align-items-center gap-3 text-dark fw-bold">
+          <a href="index.html" id="nav_link" class="d-flex align-items-center gap-3 text-dark fw-bold">
             <span class="material-icons">
               assignment
             </span>
@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="mb-4">
-          <a href="admin.html" class="d-flex align-items-center gap-3 text-dark fw-bold">
+          <a href="admin.html" id="nav_link" class="d-flex align-items-center gap-3 text-dark fw-bold">
             <span class="material-icons">
               group
             </span>
@@ -87,9 +87,18 @@
             <h2 class="fs-4 fw-bold">Assignment</h2>
             <div class="d-flex gap-2 align-items-center">
                 <p class="fw-bold">All Courses</p>
-                <a href="#"><span class="material-icons text-success">
-                        expand_more
-                    </span></a>
+                <div class="dropdown">
+                    <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="material-icons text-success">
+                            expand_more
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div>
@@ -107,12 +116,21 @@
         <section class="assignment_list_drop d-flex justify-content-between">
             <div class="d-flex align-items-center">
                 <p class="me-2">All (4)</p>
-                <a href="#"><span class="material-icons text-success">
-                        expand_more
-                    </span></a>
+                <div class="dropdown">
+                    <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="material-icons text-success">
+                            expand_more
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
 
             </div>
-            <a href="##">2 comments</a>
+            <a href="#" class="text-secondary">2 comments</a>
         </section>
         <section class="d-flex gap-3 justify-content-between">
             <div class="row">
@@ -285,7 +303,8 @@
                         </ul>
                     </div>
                     <form action="" class="d-flex flex-column">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Reply an answer…" class="px-4 py-3"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Reply an answer…"
+                            class="px-4 py-3"></textarea>
                         <div class="textarea_btn py-3 px-4">
                             <a href="#" class="cancel btn btn-outline-success">Cancel</a>
                             <a href="#" class="text-white btn btn-success">Reply</a>
